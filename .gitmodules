@@ -1,3 +1,4 @@
 [submodule "SDL"]
 	path = SDL
-	url = https://github.com/libsdl-org/SDL.git
+	url = https://github.com/creichen/SDL.git
+	branch = pen-api

@@ -8246,7 +8246,7 @@ impl SDL_EventType {
     pub const SDL_EVENT_WINDOW_FIRST: SDL_EventType = SDL_EventType::SDL_EVENT_WINDOW_SHOWN;
 }
 impl SDL_EventType {
-    pub const SDL_EVENT_WINDOW_LAST: SDL_EventType = SDL_EventType::SDL_EVENT_WINDOW_PEN_LEAVE;
+    pub const SDL_EVENT_WINDOW_LAST: SDL_EventType = SDL_EventType::SDL_EVENT_WINDOW_DESTROYED;
 }
 #[repr(u32)]
 #[doc = " The types of events that can be delivered."]
@@ -8306,30 +8306,30 @@ pub enum SDL_EventType {
     SDL_EVENT_WINDOW_MOUSE_ENTER = 523,
     #[doc = "< Window has lost mouse focus"]
     SDL_EVENT_WINDOW_MOUSE_LEAVE = 524,
-    #[doc = "< Window has gained keyboard focus"]
-    SDL_EVENT_WINDOW_FOCUS_GAINED = 525,
-    #[doc = "< Window has lost keyboard focus"]
-    SDL_EVENT_WINDOW_FOCUS_LOST = 526,
-    #[doc = "< The window manager requests that the window be closed"]
-    SDL_EVENT_WINDOW_CLOSE_REQUESTED = 527,
-    #[doc = "< Window is being offered a focus (should SetWindowInputFocus() on itself or a subwindow, or ignore)"]
-    SDL_EVENT_WINDOW_TAKE_FOCUS = 528,
-    #[doc = "< Window had a hit test that wasn't SDL_HITTEST_NORMAL"]
-    SDL_EVENT_WINDOW_HIT_TEST = 529,
-    #[doc = "< The ICC profile of the window's display has changed"]
-    SDL_EVENT_WINDOW_ICCPROF_CHANGED = 530,
-    #[doc = "< Window has been moved to display data1"]
-    SDL_EVENT_WINDOW_DISPLAY_CHANGED = 531,
-    #[doc = "< Window display scale has been changed"]
-    SDL_EVENT_WINDOW_DISPLAY_SCALE_CHANGED = 532,
-    #[doc = "< The window has been occluded"]
-    SDL_EVENT_WINDOW_OCCLUDED = 533,
-    #[doc = "< The window with the associated ID is being or has been destroyed. If this message is being handled\nin an event watcher, the window handle is still valid and can still be used to retrieve any userdata\nassociated with the window. Otherwise, the handle has already been destroyed and all resources\nassociated with it are invalid"]
-    SDL_EVENT_WINDOW_DESTROYED = 534,
     #[doc = "< Window has gained focus of the pressure-sensitive pen with ID \"data1\""]
-    SDL_EVENT_WINDOW_PEN_ENTER = 535,
+    SDL_EVENT_WINDOW_PEN_ENTER = 525,
     #[doc = "< Window has lost focus of the pressure-sensitive pen with ID \"data1\""]
-    SDL_EVENT_WINDOW_PEN_LEAVE = 536,
+    SDL_EVENT_WINDOW_PEN_LEAVE = 526,
+    #[doc = "< Window has gained keyboard focus"]
+    SDL_EVENT_WINDOW_FOCUS_GAINED = 527,
+    #[doc = "< Window has lost keyboard focus"]
+    SDL_EVENT_WINDOW_FOCUS_LOST = 528,
+    #[doc = "< The window manager requests that the window be closed"]
+    SDL_EVENT_WINDOW_CLOSE_REQUESTED = 529,
+    #[doc = "< Window is being offered a focus (should SetWindowInputFocus() on itself or a subwindow, or ignore)"]
+    SDL_EVENT_WINDOW_TAKE_FOCUS = 530,
+    #[doc = "< Window had a hit test that wasn't SDL_HITTEST_NORMAL"]
+    SDL_EVENT_WINDOW_HIT_TEST = 531,
+    #[doc = "< The ICC profile of the window's display has changed"]
+    SDL_EVENT_WINDOW_ICCPROF_CHANGED = 532,
+    #[doc = "< Window has been moved to display data1"]
+    SDL_EVENT_WINDOW_DISPLAY_CHANGED = 533,
+    #[doc = "< Window display scale has been changed"]
+    SDL_EVENT_WINDOW_DISPLAY_SCALE_CHANGED = 534,
+    #[doc = "< The window has been occluded"]
+    SDL_EVENT_WINDOW_OCCLUDED = 535,
+    #[doc = "< The window with the associated ID is being or has been destroyed. If this message is being handled\nin an event watcher, the window handle is still valid and can still be used to retrieve any userdata\nassociated with the window. Otherwise, the handle has already been destroyed and all resources\nassociated with it are invalid"]
+    SDL_EVENT_WINDOW_DESTROYED = 536,
     #[doc = "< Key pressed"]
     SDL_EVENT_KEY_DOWN = 768,
     #[doc = "< Key released"]
